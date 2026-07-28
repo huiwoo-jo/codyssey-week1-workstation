@@ -18,6 +18,8 @@
 
 ## 3. 수행 항목 체크리스트
 
+### 기본 과제
+
 - [x] 터미널 기본 조작 및 폴더 구성
 - [x] 권한 변경 실습 (chmod 644 / 755)
 - [x] Docker 설치/점검 (OrbStack)
@@ -29,6 +31,14 @@
 - [x] Docker 볼륨 데이터 영속성 검증
 - [x] Git/GitHub 연동
 - [x] VSCode Github 연결
+
+### 보너스 과제
+
+- [x] Docker Compose 기초
+- [x] Docker Compose 멀티 컨테이너
+- [x] Compose 운영 명령어 습득
+- [x] 환경 변수 활용
+- [x] GitHub SSH 키 설정
 
 <br/>
 
@@ -629,8 +639,6 @@ curl http://localhost:9090
 
 [실행 결과]
 ![alt text](image-16.png)
-
-====
 
 ## 5. GitHub SSH 키 설정
 
