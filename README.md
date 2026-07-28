@@ -56,9 +56,9 @@ chmod 755 test-dir
 ls -ld test-dir              # 변경 전/후 권한 확인 로그 수집
 ```
 
-2. 실행 화면
+2. CLI 실행 화면
+<img width="1470" height="923" alt="4" src="https://github.com/user-attachments/assets/2dc4e4e7-a740-4ddc-aaa7-048345389f8f" />
 
-` local에서 사진 복사가 되지 않아 origin에서 추가 예정`
 
 <br/>
 
@@ -73,9 +73,9 @@ docker --version
 docker info
 ```
 
-2. 실행 화면
+2. CLI 실행 화면
+<img width="1470" height="923" alt="5-1" src="https://github.com/user-attachments/assets/990b9ec4-72d3-4bb5-ac70-460461e624a9" />
 
-` local에서 사진 복사가 되지 않아 origin에서 추가 예정`
 
 ### 5-2. hello-world 컨테이너 실행
 
@@ -85,9 +85,9 @@ docker info
 docker run hello-world
 ```
 
-2. 실행 화면
+2. CLI 실행 화면
+<img width="1470" height="923" alt="5-2" src="https://github.com/user-attachments/assets/254a03a2-a8dd-4e5f-b8a8-02338c307d25" />
 
-` local에서 사진 복사가 되지 않아 origin에서 추가 예정`
 
 ### 5-3. ubuntu 컨테이너 진입 및 간단한 명령 수행
 
@@ -100,9 +100,10 @@ echo "Hello Ubuntu"
 exit
 ```
 
-2. 실행 화면
+2. CLI 실행 화면
 
-` local에서 사진 복사가 되지 않아 origin에서 추가 예정`
+<img width="1470" height="923" alt="5-3" src="https://github.com/user-attachments/assets/50df23ba-1836-497b-8f1f-396ee5cfb032" />
+
 
 <br/>
 
@@ -136,7 +137,7 @@ EXPOSE 80
 
 ### 6-2. 이미지 빌드 및 포트 매핑 실행
 
-1. cli
+1. CLI
 
 ```bash
 # 이미지 빌드
@@ -150,9 +151,16 @@ docker ps
 curl http://localhost:8080
 ```
 
-2. 실행 화면
+2. CLI 실행 화면
 
-` local에서 사진 복사가 되지 않아 origin에서 추가 예정`
+|<img width="1470" height="923" alt="6-2-1" src="https://github.com/user-attachments/assets/c47fbd30-87b7-44fb-b4be-e04f12f70773" />|<img width="1470" height="923" alt="6-2-3" src="https://github.com/user-attachments/assets/2bd2ff24-b9de-4f9e-b463-ff42d4900c04" />|
+|---|---|
+
+
+4. 결과 화면
+
+<img width="1470" height="923" alt="6-3" src="https://github.com/user-attachments/assets/c1da3ac7-d8c0-4f6a-94bc-dcd8064ce6cc" />
+
 
 <br/>
 
@@ -160,7 +168,7 @@ curl http://localhost:8080
 
 ### 7-1. 바인드 마운트 실습
 
-1. cli
+1. CLI
 
 - 접속 문제로 인하여 8081 포트로 변경 실행
 
@@ -175,13 +183,17 @@ echo "<h1>Updated Content via Bind Mount!</h1>" > app/index.html
 curl http://localhost:8081
 ```
 
-2. 실행 화면
+2. CLI 실행 화면
 
-` local에서 사진 복사가 되지 않아 origin에서 추가 예정`
+<img width="1470" height="923" alt="7-1-2" src="https://github.com/user-attachments/assets/415ee6f8-0304-49f1-b918-4c21025aeae4" />
+
+
+3. 결과 화면
+<img width="1470" height="923" alt="7-1-3" src="https://github.com/user-attachments/assets/9ae425ec-1956-450e-bfc8-4b0df1fd833c" />
 
 ### 7-2. Docker 볼륨 데이터 영속성 검증
 
-1. cli
+1. CLI
 
 ```bash
 # 1. 볼륨 생성
@@ -203,19 +215,23 @@ docker exec vol-container2 cat /data/test.txt
 
 2. 실행 화면
 
-` local에서 사진 복사가 되지 않아 origin에서 추가 예정`
+<img width="1470" height="923" alt="7-2-1" src="https://github.com/user-attachments/assets/04f4cf09-129c-4a88-ad8b-d03fe7889262" />
+
 
 <br/>
 
 ## 8. Git 설정 및 GitHub 저장소 생성
 
-### 8-1. local 폴더
+### 8-1. Github 설정 및 저장소 연결 CLI
+<img width="1470" height="923" alt="8-1" src="https://github.com/user-attachments/assets/b5d6f16c-7759-49c4-bb2d-046cee398af3" />
 
-` local에서 사진 복사가 되지 않아 origin에서 추가 예정`
 
-### 8-2. origin 폴더
+### 8-2. 결과 화면
+- `test-dir`은 빈 디렉토리이므로 `origin`에 올라가지 않습니다.
+|origin|local|
+|---|---|
+|<img width="1470" height="923" alt="8-2" src="https://github.com/user-attachments/assets/31211c89-8cc5-466f-90f9-3d899dd0f528" />|<img width="1470" height="923" alt="8-3" src="https://github.com/user-attachments/assets/41d03f02-20f3-4db6-b1e4-4dea9ad88fd3" />|
 
-` local에서 사진 복사가 되지 않아 origin에서 추가 예정`
 
 <br/>
 
