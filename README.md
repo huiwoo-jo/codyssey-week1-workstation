@@ -247,23 +247,23 @@ OrbStack/Docker 빌드 시 일부 베이스 이미지 사용 시
 호스트 기기(MacBook Air)가 ARM64(aarch64) 아키텍처를 사용하는데 불러오려는 이미지나 일부 종속 라이브러리가 x86_64(amd64) 기반으로 작성되었을 것이다.
 
 <b>[검증 방법]</b> </br>
-docker inspect <image_name> 명령을 통해 Architecture 항목이 arm64인지 amd64인지 확인.
+`docker inspect <image_name>` 명령을 통해 Architecture 항목이 arm64인지 amd64인지 확인.
 
 <b> [해결 방안]</b> </br>
-docker build 명령어 실행 시 --platform linux/arm64 플래그를 명시하여 호스트 아키텍처에 맞는 이미지를 다운로드 및 빌드하도록 해결함.
+docker build 명령어 실행 시 `--platform linux/arm64` 플래그를 명시하여 호스트 아키텍처에 맞는 이미지를 다운로드 및 빌드하도록 해결함.
 
 ---
 
 ### [Troubleshooting 2] 포트 충돌(Port Conflict)로 인한 컨테이너 실행 실패
 
 <b>[문제 상황]</b> </br>
-docker run -d -p 8080:80 ... 명령어로 웹 서버 컨테이너를 실행하려고 할 때 `bind: address already in use` 에러가 발생하며 컨테이너가 생성되지 않음.
+`docker run -d -p 8080:80 ...` 명령어로 웹 서버 컨테이너를 실행하려고 할 때 `bind: address already in use` 에러가 발생하며 컨테이너가 생성되지 않음.
 
 <b>[원인 가설]</b> </br>
 호스트 PC의 8080 포트를 이미 다른 애플리케이션이나 이전에 실행한 테스트 컨테이너가 사용 중일 것이다.
 
 <b>[검증 방법]</b> </br>
-터미널에서 macOS 포트 확인 명령(lsof -i :8080)으로 점유 프로세스를 확인함.
+터미널에서 macOS 포트 확인 명령 `lsof -i :8080`으로 점유 프로세스를 확인함.
 
 <b>[해결 방안]</b> </br>
-호스트 포트를 바꿔서 docker run -d -p 8081:80 ... 형태로 매핑 포트를 변경하여 정상 실행함.
+호스트 포트를 바꿔서 `docker run -d -p 8081:80 ...` 형태로 매핑 포트를 변경하여 정상 실행함.
