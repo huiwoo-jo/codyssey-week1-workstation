@@ -316,7 +316,7 @@ EOF
 
 2. CLI 실행 화면
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ### 1-3. `.env` 환경 변수 파일 작성
 
@@ -330,7 +330,7 @@ EOF
 ```
 
 2. CLI 실행 화면
-   ![alt text](image-1.png)
+   ![alt text](images/image-1.png)
 
 ### 1-4. 실행 및 상태 확인
 
@@ -351,10 +351,10 @@ curl http://localhost:8082
 ```
 
 2. CLI 실행 화면
-   ![alt text](image-2.png)
+   ![alt text](images/image-2.png)
 
 3. 실행 화면
-   ![alt text](image-3.png)
+   ![alt text](images/image-3.png)
 
 <br/>
 
@@ -451,7 +451,7 @@ EOF
 </details>
 
 2. CLI 실행 화면
-   ![alt text](image-4.png)
+   ![alt text](images/image-4.png)
 
 ### 2-2. 실행 및 컨테이너 간 네트워크 통신 검증
 
@@ -470,7 +470,7 @@ docker compose exec web ping -c 2 redis
 
 2. CLI 실행 화면
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 <div>
 <b>서비스 디스커버리(Service Discovery)</b>
@@ -490,7 +490,7 @@ docker compose down
 
 ### CLI 실행 화면
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 <br/>
 
@@ -507,7 +507,7 @@ docker compose up -d
 - `-d` (Detached mode): 컨테이너를 백그라운드에서 실행함. 터미널을 계속 사용할 수 있게함. 이미지가 없으면 빌드/다운로드부터 실행까지 일괄 처리.
 
 2. CLI 실행 화면
-   ![alt text](image-7.png)
+   ![alt text](images/image-7.png)
 
 ### 3-2. 상태 확인 (Inspect)
 
@@ -521,7 +521,7 @@ docker compose ps
 - STATUS가 Up인지 PORTS 매핑이 의도한 대로 되어 있는지 확인.
 
 2. CLI 실행 화면
-   ![alt text](image-8.png)
+   ![alt text](images/image-8.png)
 
 ### 3-3. 로그 모니터링 (Debug)
 
@@ -538,7 +538,7 @@ docker compose logs -f --tail 100
 - 특정 서비스 로그만 보고 싶다면 끝에 이름 추가: `docker compose logs -f web`
 
 2. CLI 실행 화면
-   ![alt text](image-9.png)
+   ![alt text](images/image-9.png)
 
 ### 3-4. 종료 및 정리 (Cleanup)
 
@@ -552,7 +552,7 @@ docker compose down
 - 데이터(볼륨)는 유지되지만 컨테이너 자체는 사라지므로 깨끗한 상태로 돌아갈 때 사용.
 
 2. CLI 실행 화면
-   ![alt text](image-10.png)
+   ![alt text](images/image-10.png)
 
 ## 4. Docker & Compose 환경 변수 활용
 
@@ -590,7 +590,7 @@ EOF
 ```
 
 [CLI 실행 결과]
-![alt text](image-11.png)
+![alt text](images/image-11.png)
 
 #### 4-3-2. Compose 재구동 (docker compose up -d)
 
@@ -601,7 +601,7 @@ docker compose up -d
 ```
 
 [CLI 실행 결과]
-![alt text](image-12.png)
+![alt text](images/image-12.png)
 
 #### 4-3-3. 변경 결과
 
@@ -614,7 +614,7 @@ docker compose ps
 ```
 
 [CLI 실행 결과]
-![alt text](image-13.png)
+![alt text](images/image-13.png)
 
 2. 컨테이너 내부 주입 환경 변수 확인 (docker compose exec)
    [CLI]
@@ -624,7 +624,7 @@ docker compose exec web printenv APP_ENV
 ```
 
 [CLI 실행 결과]
-![alt text](image-14.png)
+![alt text](images/image-14.png)
 
 3. 접속 테스트
 
@@ -635,10 +635,10 @@ curl http://localhost:9090
 ```
 
 [CLI 실행 결과]
-![alt text](image-15.png)
+![alt text](images/image-15.png)
 
 [실행 결과]
-![alt text](image-16.png)
+![alt text](images/image-16.png)
 
 ## 5. GitHub SSH 키 설정
 
@@ -751,7 +751,7 @@ Hi <GitHub_사용자명>! You've successfully authenticated, but GitHub does not
 ```
 
 [CLI 실행 화면]
-![alt text](image-17.png)
+![alt text](images/image-17.png)
 
 ### 5-2-6. Git 원격 저장소 URL을 HTTPS에서 SSH로 변경
 
@@ -772,4 +772,4 @@ origin git@github.com:username/repository-name.git (fetch)
 ```
 
 [CLI 실행 화면]
-![alt text](image-18.png)
+![alt text](images/image-18.png)
